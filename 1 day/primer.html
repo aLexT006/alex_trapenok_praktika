@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Пример страницы</title>
+	<style>
+		.on li {
+			list-style: none;
+			text-indent: -1em;
+		}
+
+		.on li::before {
+			content: '\2d';
+			padding-right: 5px;
+		}
+
+		.tw li {
+			list-style: square;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>HTML.
+		Теги и атрибуты</h1>
+	<h2>Литералы/Мнемоники. Примеры</h2>
+	<p>&amp;mdash (длинное тире) &mdash;</p>
+	<p>&amp;ndash (короткое тире) &ndash;; </p>
+	<p>&amp;quot &quot;; </p>
+	<p>&amp;amp &amp;; </p>
+	<p>&amp;lt &lt;; </p>
+	<p>&amp;gt &gt;; </p>
+	<p>&amp;copy &copy;; </p>
+	<p>&amp;reg &reg;; </p>
+	<p>&amp;Неразрывный пробел &nbsp ; </p>
+	<h2>Разметка</h2>
+	<DIV align=”center”>Это текст,
+		содержащийся в блоке</DIV>
+	<ul>
+		<li><strong>&lt;DIV align=”center”&gt;></strong>Это текст,<br>
+			содержащийся в блоке<strong>&lt;/DIV&gt;</strong></li>
+		&ndash; <strong>DIV</strong> - название тега<br>
+		&ndash; <strong>&lt;DIV align=”center”&gt;</strong> - открывающая часть тега.<br>
+		&ndash; <strong>align=”center”</strong> - пара “атрибут тега = значение”.<br>
+		&ndash; <strong>&lt;/DIV&gt;</strong> - закрывающая часть того же тега.<br>
+	</ul>
+	<h2>Атрибуты</h2>
+	<ul>
+		<li>align (выравнивание)</li>
+		<li>id (присваивание “метки” объекту)</li>
+		<li>title (работает при наведении мыши)</li>
+		&ndash; &lt;div title="Заголовок слоя"&gt;Содержимое<br>
+		слоя&lt/div&gt<br>
+		&ndash; &lt;td align=“center” valign=“top”&gt;Текст<br>
+		ячейки&lt;/td&gt;</td>
+	</ul>
+	<h2>Структура документа</h2>
+	<p>&lt;!DOCTYPE html&gt;<br>
+		&lt;HTML&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;HEAD&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;META cgarset="utf-8"&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;TITLE&gt;Пример страницы&lt;/TITLE&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;/HEAD&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;BODY&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;H1&gt;Это заголовок&lt;/H1&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;P&gt;Добрый день, уважаемые учащиеся группы 31-ИБ! Сегодня мы<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;с вами будем рассматривать структуру стандартного <br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;STRONG&gt;HTML&lt;STRONG&gt;файла&lt;/P&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;BODY&gt;<br>
+		&lt;HTML&gt;<br>
+	</p>
+	<h2>&lt;HEAD&gt;&lt;/HEAD&gt;</h2>
+	<p>
+		&lt;HEAD&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;META cgarset="utf-8"&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;TITLE&gt;Пример страницы&lt;/TITLE&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;STYLE type="text/css"&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;/STYLE&gt;<br>
+		&lt;SCRIPT src=""script.js"&gt;&lt;/SCRIPT&gt;<br>
+		&lt;LINK rel="stylesheet" href="ie.css"&gt;<br>
+		<br>
+		&lt;LINK rel="icon" href="favicon.png" type="image/png"&gt;<br>
+		&lt;/HEAD&gt;<br>
+	</p>
+	<h2>&lt;BODY&gt;&lt;/BODY&gt;</h2>
+	<p>
+		&lt;BODY&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;H1&gt;Это заголовок&lt;/H1&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;P&gt;Добрый день, Уважаемые учащиеся! Сегодня мы с<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;вами будем рассматривать структуру стандартного<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;STRONG&gt;HTML&lt;/STRONG&gt; файла.&lt;/P&gt;<br>
+		&nbsp;&nbsp;&nbsp;&nbsp;&lt;SCRIPT src=""script.js"&gt;&lt;/SCRIPT&gt;<br>
+		&lt;/BODY&gt;
+	</p>
+	<h2>Вложенность тегов</h2>
+	<ul>
+		<li><strong style="color: red;">Неверно:</strong></li>
+		<li>
+			&lt;P&gt;<strong style="color: green;"">&lt;DEL&gt;</strong>Добрый день,<strong style=" color:
+				blue;"">&lt;EM&gt;</strong>Уважаемые <br>
+			учащиеся<strong style="color: green;"">&lt;/DEL</strong><strong style=" color: blue;"">&lt;/EM&gt;</strong>!
+			Сегодня мы с вами будем<br>
+			рассматривать структуру стандартного<br>
+			&lt;STRONG&gt;HTML&lt;/STRONG&gt; файла.&lt;/P&gt;
+		</li>
+		<li><strong style="color: green;">Верно:</strong></li>
+		<li>
+			&lt;P&gt;&lt;DEL&gt;Добрый день,&lt;EM&gt;&lt;/EM&lt;/DEL&gt;!
+			Сегодня мы с вами будем<br>
+			рассматривать структуру стандартного<br>
+			&lt;STRONG&gt;HTML&lt;/STRONG&gt; файла.&lt;/P&gt;
+		</li>
+	</ul>
+	<h2>Всё должно быть упаковано</h2>
+	<ul>
+		<li><strong style="color: red;">Неверно:</strong></li>
+		<li>
+			&lt;BODY&gt;<br>
+			&lt;P&gt;<strong style="color: green;"">&lt;DEL&gt;</strong>Добрый день,<strong style=" color:
+				blue;"">&lt;EM&gt;</strong>Уважаемые <br>
+			учащиеся<strong style="color: green;"">&lt;/DEL</strong><strong style=" color: blue;"">&lt;/EM&gt;</strong>!
+			Сегодня мы с вами будем<br>
+			рассматривать структуру стандартного&lt;/P&gt;<br>
+			<strong style="color: rgb(224, 128, 155);">&lt;STRONG&gt;HTML&lt;/STRONG&gt; файла</strong>.<br>
+			&lt;/BODY&gt;<br>
+		</li>
+		<li><strong style="color: green;">Верно:</strong></li>
+		<li>
+			&lt;BODY&gt;<br>
+			&lt;P&gt;<strong style="color: green;"">&lt;DEL&gt;</strong>Добрый день,<strong style=" color:
+				blue;"">&lt;EM&gt;</strong>Уважаемые <br>
+			учащиеся<strong style="color: green;"">&lt;/DEL</strong><strong style=" color: blue;"">&lt;/EM&gt;</strong>!
+			Сегодня мы с вами будем<br>
+			рассматривать структуру стандартного<br>
+			&lt;STRONG&gt;HTML&lt;/STRONG&gt; файла.&lt;/P&gt;<br>
+			&lt;/BODY&gt;<br>
+		</li>
+	</ul>
+	<h2>No comments?</h2>
+	<ul>
+		<li>
+			&lt;!‐‐ это комментарий в одну строку ‐‐&gt;<br>
+		</li>
+		<br>
+		<li>&lt;!‐‐&lt;H1&gt;Это заголовок&lt;H1&gt;<br>
+			&lt;P&gt;Добрый день, Уважаемые учащиеся!<br>
+			Сегодня мы с вами будем рассматривать<br>
+			структуру стандартного<br>
+			&lt;STRONG&gt;HTML&lt;/STRONG&gt; файла.&lt;/P&gt; ‐‐&gt;
+		</li>
+	</ul>
+	<h2>Блоки и строки</h2>
+	<table>
+		<tr>
+			<td>
+				<ul>
+					<li>Блоки(blocks):</li>
+					<div class="on">
+						<ul>
+							<li>заголовки</li>
+							<li>параграфы</li>
+							<li>слои</li>
+						</ul>
+					</div>
+				</ul>
+			</td>
+			<td valign="top">
+				<ul>
+					<li>Строки(inline):</li>
+					<div class="tw">
+						<ul>
+							<li>ссылки</li>
+							<li>метки</li>
+							<li>текст</li>
+						</ul>
+					</div>
+				</ul>
+			</td>
+		</tr>
+	</table>
+	<h2>Блоки и строки</h2>
+	<table>
+		<tr>
+			<td width="400" valign="top">
+				<h1 style="border: 3px solid blue;">Заголовок первого уровня<br> является блоком</h1>
+				<p style="border: 3px solid blue;">Параграф также является блоком и поэтому располагается под <br>
+					заголовком, а не слева или справа от него</p>
+				<div style="border: 3px solid blue;">
+					Это слой который заключён в тег DIV. Он также <br>
+					блок -и ведёт себя соответственно.</div>
+				<p style="border: 3px solid blue;">А в <STRONG>этом</STRONG> параграфе есть<br>
+					<DEL>различное</DEL> оформление текста, и а также<br>
+					<A href="#">ссылка</A>. Текст (<EM>контент</EM>),<br>
+					заключённый в эти строковый теги идёт один за<br>
+					другим
+				</p>
+				<img src="" width="200" height="200" border="3" alt="Картинка тоже блок">
+			</td>
+			<td valign="top">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;H1&gt;Заголовок первого уровня является блоком&lt;/H1&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;P&gt;Параграф также является блоком и поэтому<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;располагается под заголовком, а не слева или справа<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;от него&lt;/P&gt;
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;DIV&gt;Это слой который заключён в тег DIV. Он также<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;блок -и ведёт себя соответственно.&lt;DIV&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;P&gt;А в &lt;STRONG&gt;этом&lt;/STRONG&gt; параграфе есть<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;DEL&gt;различное&lt;/DEL&gt; оформление текста, и а также<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;A href="#">ссылка&lt;/A&gt;. Текст (&lt;EM&gt;контент&lt;/EM&gt;),
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;заключённый в эти строковый теги идёт один за<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;другим&lt;/P&gt;<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;img src ="" width="200" height="200" border="1"<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alt="Картинка тоже блок"&gt;
+			</td>
+		</tr>
+	</table>
+	<h2>Полезные одиночки</h2>
+	<ul>
+		<li>&lt;BR&gt;</li>
+		<li>&lt;HR&gt;</li>
+	</ul>
+	<h2>Не путайте блоки и строки!</h2>
+	<p>
+		Верно:
+	<P><EM>Добрый день, Уважаемые учащиеся! Сегодня мы<br>
+			вами будем рассматривать структуру стандартного<br>
+			<STRONG>HTML</STRONG> файла.<br>
+		</EM> </P>
+	</p>
+
+	<h2>Строки</h2>
+	<p>• Строчные (встроенные теги) всегда будут
+		содержаться внутри блочных <br>
+		– &lt;ul&gt;<br>
+	<ul>
+		<li>&lt;li&gt;&lt;ins&gt;Элемент 1&lt;/ins&gt;&lt;/li&gt;</li>
+		<li>&lt;li&gt;&lt;ins&gt;Элемент 2&lt;/ins&gt;&lt;/li&gt;</li>
+		<li>&lt;li&gt;&lt;ins&gt;Элемент 3&lt;/ins&gt;&lt;/li&gt;</li>
+	</ul>
+	</p>
+
+	<h2>Блоки</h2>
+	<p>&lt;ul&gt;<br>
+	<ul>
+		<li>&lt;li&gt;Элемент 1&lt;/li&gt;</li>
+		<li>&lt;li&gt;Элемент 2&lt;/li&gt;</li>
+		<li>&lt;li&gt;Элемент31&lt;/li&gt;</li>
+
+		&lt;ul&gt;<br>
+		<ul>
+			Открывающий тег с новой строки:
+			<p>Это абзац состоящий из нескольких
+				строк</p>
+			<h3>Это заголовок</h3>
+		</ul>
+</body>
+
+</html>
