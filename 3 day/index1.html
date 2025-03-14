@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Анкеты</title>
+</head>
+
+<body>
+	<h1 style="text-align: center;">Заполните анкету</h1>
+	<fieldset>
+		<LEGEND>Личные данные</LEGEND>
+		<INPUT TYPE="text" ID="lastname" NAME="lastname" SIZE="25" placeholder="Фамилия" pattern="^[А-Яа-яЁё]{1,25}$"
+			autofocus required>
+		<LABEL FOR="lastname">text: Только кириллица, без пробелов, длина поля 25, обязательное поле, автофокус на
+			данном
+			поле</LABEL>
+		<br>
+		<INPUT TYPE="text" ID="name" NAME="name" SIZE="20" placeholder="Имя" pattern="^[А-Яа-яЁё]{1,25}$" required>
+		<LABEL FOR="name" text: Только кириллица, без пробелов, длина поля 20, обязательное поле></LABEL>
+		<br>
+		<INPUT TYPE="text" ID="otchestvo" NAME="otchestvo" SIZE="24" placeholder="Отчество" pattern="^[А-Яа-яЁё]{1,25}$"
+			required>
+		<LABEL FOR="otchestvo" text: Только кириллица, без пробелов, длина поля 24, обязательное поле></LABEL>
+		<fieldset>
+			<legend>Паспортные данные</legend>
+			<input type="text" required pattern="[A-Z]{2}" placeholder="AA">
+			<input type="text" required pattern="\d{7}" placeholder="1234567"><br>
+		</fieldset>
+		<fieldset>
+			<legend>Дата рождения</legend>
+			<input type="text" required pattern="\d{4}" placeholder="2000"><br>
+			<select>
+				<option>Январь</option>
+				<option>Февраль</option>
+				<option>Март</option>
+				<option>Апрель</option>
+				<option>Май</option>
+				<option>Июнь</option>
+				<option>Июль</option>
+				<option>Август</option>
+				<option>Сентябрь</option>
+				<option>Октябрь</option>
+				<option>Ноябрь</option>
+				<option>Декабрь</option>
+			</select><br>
+			<input type="number" min="1" max="31" placeholder="День"><br>
+		</fieldset>
+		<select id="nation" required>
+			<option>РБ</option>
+			<option>РФ</option>
+			<option>Польша</option>
+			<option>США</option>
+		</select>
+		<label for id="nation">Национальность</label>
+		<br>
+		<label for id="address">Адрес:</label><br>
+		<textarea name="adress" lang="ru"></textarea>
+	</fieldset>
+	<fieldset>
+		<LEGEND>Интересы</LEGEND>
+		<fieldset>
+			<legend>Хобби</legend>
+			<input type="checkbox"> Рыбалка <br>
+			<input type="checkbox"> Астрономия <br>
+			<input type="checkbox"> Дайвинг <br>
+			<input type="checkbox"> Марки <br>
+		</fieldset>
+		<fieldset>
+			<legend>Домашние животные</legend>
+			<select name="pets" id="pets"><br>
+				<optgroup label="Попугаи">
+					<option value="1">Волнистый</option>
+					<option value="2">Ара</option>
+					<option value="3">Неразлучник</option>
+				</optgroup>
+				<optgroup label="Рыбы">
+					<option value="4">Караси</option>
+					<option value="5">Окуни</option>
+					<option value="6">Осетр</option>
+				</optgroup>
+				<optgroup label="Птицы">
+					<option value="4">Стая ворон</option>
+					<option value="5">Аист</option>
+					<option value="6">Архвоптерикс</option>
+				</optgroup>
+			</select>
+		</fieldset>
+		<fieldset>
+			<legend>Данные для входа и восстановления пароля</legend>
+			<input type="text" required pattern="[A-Za-z0-9]{5,20}" placeholder="Логин"><br>
+			<input type="password" required pattern="[A-Za-z0-9]{10,20}" placeholder="Пароль"><br>
+		</fieldset>
+		<fieldset>
+			<legend>Координаты</legend>
+			<input type="text" required pattern="[A-Za-z0-9]{5,20}" placeholder="Введите адрес почты"><br>
+			<input type="password" required pattern="[A-Za-z0-9]{10,20}" placeholder="Введите адрес сайта"><br>
+		</fieldset>
+		<fieldset>
+			<legend>Цифры</legend>
+			<label>Диапазон от -2.5 до 2.5:</label>
+			<input type="number" min="-2.5" max="2.5" step="0.1"><br>
+			<label>(1-10):</label>
+			<input type="range" min="1" max="10"><br>
+		</fieldset>
+		<button type="submit">Отправить</button>
+		<button type="reset">Сбросить</button><br>
+		<img src="img/email.jpg">
+	</fieldset>
+
+
+
+</body>
+
+</html>
