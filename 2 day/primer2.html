@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ссылки</title>
+</head>
+
+<body>
+	<h1>Ссылки<br>
+		в HTML
+	</h1>
+	<h2>Создание гиперссылок </h2>
+	<p><a href=“http://mysite.com/file123.html”> Текст ссылки</a></p>
+	<p><a href=“file.zip”>Скачать файл</a></p>
+	<p><a href=“../../images/index.html”> Галерея</a>
+	</p>
+	<h2>Создание гиперссылок. <br>
+		Абсолютная ссылка</h2>
+	<p><a
+			href="https://site.by/folder/file.jsp?var=val&set=one#ID">https://site.by/folder/file.jsp?var=val&set=one#ID</a>
+	</p>
+	<h2>Цели в ссылках</h2>
+	<ul>
+		<li> Открытие в новой вкладке браузера:</li>
+		<p><a href=“http://tut.by/file123.html”target=“_blank”> ссылка </a></p>
+	</ul>
+	<ul>
+		<li> Пустая ссылка:</li>
+		<p><a href=“#”>ссылка </a></p>
+	</ul>
+	<h2>Описание ссылок</h2>
+	<p> <a href=“file123.pdf” title=“Файл размером 15 Мб” download>
+			скачать
+		</a></p>
+	<p> <a href=“/” title=“go home”>
+			Home
+		</a>
+	</p>
+	<h2>Сошлёмся на почту!</h2>
+	<p> <a href=“mailto:mail@mail.com” title=“Создание письма с автору”>
+			Написать
+			письмо автору
+		</a>
+	</p>
+	<h2>Якоря. Вариант 1</h2>
+	<ul>
+		<li> Оглавление (переход от ссылки):</li>
+		<p><A HREF="#chapter3">Глава 3</A></p>
+	</ul>
+	<ul>
+		<li>Контент (переход к главе):</li>
+		<P>Окончание второй главы...</P>
+		<A name="chapter3">Текст якоря</A>
+		<P>Начало третьей главы...</P>
+	</ul>
+	<h2>Якоря. Вариант 2</h2>
+	<ul>
+		<li> Оглавление (переход от ссылки):</li>
+		<p><A HREF="#chapter3">Глава 3</A></p>
+	</ul>
+	<ul>
+		<li>Контент (переход к главе):</li>
+		<P>Окончание второй главы...</P>
+		<h2 id="chapter3">Заголовок третьей
+			главы</h2>
+		<P>Начало третьей главы...</P>
+	</ul>
+	<h2>Изображения-гиперссылки</h2>
+	<A HREF="mailto:mail@mail.com">– <IMG SRC="email.gif"></A>
+	<h2>Полоса навигации</h2>
+	<P><A HREF=“page10.html”>
+			Страница 10</A> |
+		<A HREF=“page11.html”>
+			Страница 11</A> |
+		<A HREF=“page12.html”>
+			Страница 12 </A>
+	</P>
+	<h2>Меню список</h2>
+	<ul>
+		<li><a href="#">Пункт 1</a></li>
+		<li><a href="#">Пункт 2</a></li>
+		<li><a href="#">Пункт 3</a></li>
+	</ul>
+	<h2>Меню список</h2>
+	<ul>
+		<li><a href="#">Пункт 1</a>– <ul>
+				<li><a href="#">Пункт 1</a></li>
+				<li><a href="#">Пункт 2</a></li>–
+			</ul>
+		</li>
+		<li><a href="#">Пункт 2</a></li>
+		<li><a href="#">Пункт 3</a></li>
+	</ul>
+
+</body>
+
+</html>
