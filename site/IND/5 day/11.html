@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Тест</title>
+	<style>
+		body {
+			height: 1000px;
+		}
+
+		.header {
+			text-align: center;
+			height: 50px;
+			background-color: yellow;
+		}
+
+		.menu {
+			width: 200px;
+			height: 600px;
+			background: red;
+			float: left;
+		}
+
+		.content {
+			background: green;
+			height: 600px;
+			margin-left: 200px;
+			margin-right: 200px;
+
+		}
+
+		.banner {
+			width: 200px;
+			height: 600px;
+			background: blue;
+			float: right
+		}
+
+
+		.footer {
+			height: 50px;
+			background: violet;
+			clear: both;
+		}
+
+		.wrap {
+			background: gray;
+		}
+
+		.clear {
+			/*background: black;*/
+			height: 10px;
+			clear: both;
+		}
+
+		.container {
+			position: relative;
+			width: 300px;
+			height: 300px;
+			background-color: lightblue;
+			border: 10px solid white;
+			margin: 0 auto;
+		}
+
+		.red-rectangle {
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			position: absolute;
+		}
+
+		.red-rectangle.bottom {
+			top: 60%;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		.red-rectangle.left {
+			top: 30%;
+			left: 10%;
+			transform: translateY(-50%);
+		}
+
+		.red-rectangle.right {
+			top: 30%;
+			right: 10%;
+			transform: translateY(-50%);
+		}
+
+		.orange-rectangle {
+			width: 150px;
+			height: 150px;
+			background-color: orange;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	</style>
+</head>
+
+<body>
+	<div class="header">
+		header
+	</div>
+	<div class="wrap">
+		<div class="menu">
+			<h2 style="text-align: center;">Меню</h2>
+			<ul>
+				<li><a href="index.html">Главная</a></li>
+				<li><a href="1.html">Пример 1</a></li>
+				<li>Пример 2
+					<ul>
+						<li><a href="2.html">Пример 2-1</a></li>
+						<li><a href="3.html">Пример 2-2</a></li>
+					</ul>
+				</li>
+				<li><a href="4.html">Пример 3</a></li>
+				<li><a href="5.html">Пример 4</a></li>
+				<li><a href="6.html">Пример 5</a></li>
+				<li><a href="7.html">Пример 6</a></li>
+				<li><a href="8.html">Пример 7</a></li>
+				<li><a href="9.html">Пример 8</a></li>
+				<li><a href="10.html">Пример 9</a></li>
+				<li><a href="11.html">Тест</a></li>
+			</ul>
+		</div>
+		<div class="banner">banner</div>
+		<div class="content">
+			<div class="container">
+				<div class="red-rectangle bottom"></div>
+				<div class="red-rectangle left"></div>
+				<div class="red-rectangle right"></div>
+				<div class="orange-rectangle"></div>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+	<div class="footer">
+		footer
+	</div>
+</body>
+
+</html>
